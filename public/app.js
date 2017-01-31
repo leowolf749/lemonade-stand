@@ -24,6 +24,10 @@ for (let i = 0; i < controllers.length; i++) {
     app.controller(controllers[i].name, controllers[i].func);
 };
 
+app.factory('LemonadeService', function () {
+    let log = [];
+});
+
 app.component('dayInfo', {
     templateUrl: 'templates/day-info.html',
     bindings: {
@@ -36,7 +40,10 @@ module.exports = {
     name: 'LemonadeStandController',
     func: function($scope) {
         $scope.log = [
-            { day: 1, money: '$' + 10.00, visitors: 0, customers: 0},
+            { label: 'Day', value: 1},
+            { label: 'Money', value: '$' + 10},
+            { label: 'Visitors', value: 0},
+            { label: 'Customers', value: 0},
         ];
     },
 };

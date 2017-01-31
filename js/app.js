@@ -23,6 +23,10 @@ for (let i = 0; i < controllers.length; i++) {
     app.controller(controllers[i].name, controllers[i].func);
 };
 
+app.factory('LemonadeService', function () {
+    let log = [];
+});
+
 app.component('dayInfo', {
     templateUrl: 'templates/day-info.html',
     bindings: {

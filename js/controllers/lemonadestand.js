@@ -2,7 +2,10 @@ module.exports = {
     name: 'LemonadeStandController',
     func: function($scope) {
         $scope.log = [
-            { day: 1, money: '$' + 10.00, visitors: 0, customers: 0},
+            { label: 'Day', value: 1},
+            { label: 'Money', value: '$' + 10},
+            { label: 'Visitors', value: 0},
+            { label: 'Customers', value: 0},
         ];
     },
 };
