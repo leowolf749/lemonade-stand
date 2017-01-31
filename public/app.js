@@ -47,10 +47,10 @@ module.exports = {
     name: 'LemonadeStandController',
     func: function($scope) {
         $scope.log = [
-            { label: 'Day', value: 1},
-            { label: 'Money', value: '$' + 10},
-            { label: 'Visitors', value: 0},
-            { label: 'Customers', value: 0},
+            { label: 'DAY', value: 1},
+            { label: 'MONEY', value: '$' + 10},
+            { label: 'VISITORS', value: 0},
+            { label: 'CUSTOMERS', value: 0},
         ];
     },
 };
@@ -59,10 +59,10 @@ module.exports = {
     name: 'ResourcesController',
     func: function($scope) {
         $scope.resources = [
-            {name: 'lemons', stock: 0},
-            {name: 'sugar', stock: 0},
-            {name: 'ice', stock: 0},
-            {name: 'cups', stock: 0},
+            {name: 'lemons', stock: 0, price: 2},
+            {name: 'sugar', stock: 10, price: 1.25},
+            {name: 'ice', stock: 5, price: .50},
+            {name: 'cups', stock: 20, price: .10},
         ];
     },
 };

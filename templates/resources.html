@@ -1,4 +1,5 @@
 <h2>{{ $ctrl.supplies.name }}</h2>
-<p>{{ $ctrl.supplies.stock }}</p>
-<input type='numbers' placeholder='price'>
-<button>buy</button>
+<p>In stock: {{ $ctrl.supplies.stock }}</p>
+<input type='number' placeholder='${{ $ctrl.supplies.price }} each'>
+<button ng-show="$ctrl.supplies.stock > 0">Buy</button>
+<button disabled ng-show="$ctrl.supplies.stock === 0">Out of stock</button>

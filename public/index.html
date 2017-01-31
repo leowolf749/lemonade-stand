@@ -16,10 +16,6 @@
     <section ng-controller="LemonadeStandController">
         <ul>
             <li ng-repeat="info in log">
-                <!--<p>Day: {{ info.day }}</p>
-                <p>Money: {{ info.money }}</p>
-                <p>Vistors (yesterday): {{ info.visitors }}</p>
-                <p>Customers (yesterday): {{ info.customers }}</p>-->
                 <day-info stats="info"></day-info>
             </li>
         </ul>
@@ -28,10 +24,6 @@
     <section ng-controller="ResourcesController">
         <ul>
             <li ng-repeat="resource in resources">
-                <!--<h2>{{ resource.name }}</h2>
-                <p>{{ resource.stock }} in stock</p>
-                <input type='number' placeholder='price'>
-                <button>buy</button>-->
                 <resources supplies="resource"></resources>
             </li>
         </ul>
