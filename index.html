@@ -16,10 +16,11 @@
     <section ng-controller="LemonadeStandController">
         <ul>
             <li ng-repeat="info in log">
-                <p>Day: {{ info.day }}</p>
+                <!--<p>Day: {{ info.day }}</p>
                 <p>Money: {{ info.money }}</p>
                 <p>Vistors (yesterday): {{ info.visitors }}</p>
-                <p>Customers (yesterday): {{ info.customers }}</p>
+                <p>Customers (yesterday): {{ info.customers }}</p>-->
+                <day-info stats="info"></day-info>
             </li>
         </ul>
     </section>

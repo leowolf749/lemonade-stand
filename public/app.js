@@ -23,6 +23,14 @@ const controllers = [
 for (let i = 0; i < controllers.length; i++) {
     app.controller(controllers[i].name, controllers[i].func);
 };
+
+app.component('dayInfo', {
+    templateUrl: 'templates/day-info.html',
+    bindings: {
+        stats: '<',
+    },
+    controller: 'LemonadeStandController',
+});
 },{"./controllers/lemonadestand":2,"./controllers/resources":3}],2:[function(require,module,exports){
 module.exports = {
     name: 'LemonadeStandController',
