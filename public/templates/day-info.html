@@ -1,2 +1,9 @@
-<h4>{{ $ctrl.stats.label }}</h4>
-<p>{{ $ctrl.stats.value }}</p>
+<section>
+    <ul>
+        <li ng-repeat="info in log">
+            <h4>{{ info.label }}</h4>
+            <p>{{ info.value }}</p>
+        </li>
+    </ul>
+</section>
+

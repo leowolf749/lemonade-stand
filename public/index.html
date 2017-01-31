@@ -13,21 +13,11 @@
     
 <body ng-app="LemonadeApp">
     <h1>lemonade stand</h1>
-    <section ng-controller="LemonadeStandController">
-        <ul>
-            <li ng-repeat="info in log">
-                <day-info stats="info"></day-info>
-            </li>
-        </ul>
-    </section>
 
-    <section ng-controller="ResourcesController">
-        <ul>
-            <li ng-repeat="resource in resources">
-                <resources supplies="resource"></resources>
-            </li>
-        </ul>
-    </section>
+    <day-info stats="info"></day-info>
+
+    <resources supplies="resource"></resources>
+
 </body>
 
 </html>

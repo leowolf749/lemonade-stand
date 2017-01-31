@@ -23,9 +23,6 @@ for (let i = 0; i < controllers.length; i++) {
     app.controller(controllers[i].name, controllers[i].func);
 };
 
-app.factory('LemonadeService', function () {
-    let log = [];
-});
 
 app.component('dayInfo', {
     templateUrl: 'templates/day-info.html',
@@ -40,4 +37,35 @@ app.component('resources', {
     bindings: {
         supplies: '<',
     },
+});
+
+app.factory('LemonadeService', function () {
+    const log = [            
+            { label: 'DAY', value: 1},
+            { label: 'MONEY', value: '$' + 10},
+            { label: 'VISITORS', value: 100},
+            { label: 'CUSTOMERS', value: 0},
+    ];
+    
+    return {
+        getLog() {
+            return log;
+        },
+    };
+
+});
+
+app.factory('ResourcesService', function () {
+    const resources = [
+            {name: 'lemons', stock: 10, price: 2},
+            {name: 'sugar', stock: 0, price: 1.25},
+            {name: 'ice', stock: 0, price: .50},
+            {name: 'cups', stock: 0, price: .10},
+    ];
+
+    return {
+        getResources() {
+            return resources;
+        },
+    };
 });

@@ -1,5 +1,11 @@
-<h2>{{ $ctrl.supplies.name }}</h2>
-<p>In stock: {{ $ctrl.supplies.stock }}</p>
-<input type='number' placeholder='${{ $ctrl.supplies.price }} each'>
-<button ng-show="$ctrl.supplies.stock > 0">Buy</button>
-<button disabled ng-show="$ctrl.supplies.stock === 0">Out of stock</button>
+<section ng-controller="ResourcesController">
+    <ul>
+        <li ng-repeat="resource in resources">
+            <h2>{{ resource.name }}</h2>
+                <p>In stock: {{ resource.stock }}</p>
+                <input type='number' placeholder='${{ resource.price }} each'>
+                <button ng-show="resource.stock > 0">Buy</button>
+                <button disabled ng-show="resource.stock === 0">Buy</button>
+        </li>
+    </ul>
+</section>
