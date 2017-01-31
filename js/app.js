@@ -34,3 +34,10 @@ app.component('dayInfo', {
     },
     controller: 'LemonadeStandController',
 });
+
+app.component('resources', {
+    templateUrl: 'templates/resources.html',
+    bindings: {
+        supplies: '<',
+    },
+});

@@ -35,6 +35,13 @@ app.component('dayInfo', {
     },
     controller: 'LemonadeStandController',
 });
+
+app.component('resources', {
+    templateUrl: 'templates/resources.html',
+    bindings: {
+        supplies: '<',
+    },
+});
 },{"./controllers/lemonadestand":2,"./controllers/resources":3}],2:[function(require,module,exports){
 module.exports = {
     name: 'LemonadeStandController',
@@ -53,6 +60,9 @@ module.exports = {
     func: function($scope) {
         $scope.resources = [
             {name: 'lemons', stock: 0},
+            {name: 'sugar', stock: 0},
+            {name: 'ice', stock: 0},
+            {name: 'cups', stock: 0},
         ];
     },
 };
