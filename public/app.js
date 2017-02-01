@@ -40,37 +40,15 @@ app.component('resources', {
     },
 });
 
-app.factory('LemonadeService', function () {
-    const log = [            
-            { label: 'DAY', value: 1},
-            { label: 'MONEY', value: '$' + 10},
-            { label: 'VISITORS', value: 100},
-            { label: 'CUSTOMERS', value: 0},
-    ];
-    
-    return {
-        getLog() {
-            return log;
-        },
-    };
+const services = [
+    require('./services/lemonadeservice'),
+    require('./services/resourcesservice'),
+];
 
-});
-
-app.factory('ResourcesService', function () {
-    const resources = [
-            {name: 'lemons', stock: 10, price: 2},
-            {name: 'sugar', stock: 0, price: 1.25},
-            {name: 'ice', stock: 0, price: .50},
-            {name: 'cups', stock: 0, price: .10},
-    ];
-
-    return {
-        getResources() {
-            return resources;
-        },
-    };
-});
-},{"./controllers/lemonadestand":2,"./controllers/resources":3}],2:[function(require,module,exports){
+for (let i = 0; i < services.length; i++) {
+    app.factory(services[i].name, services[i].func);
+};
+},{"./controllers/lemonadestand":2,"./controllers/resources":3,"./services/lemonadeservice":4,"./services/resourcesservice":5}],2:[function(require,module,exports){
 module.exports = {
     name: 'LemonadeStandController',
     func: function($scope, LemonadeService) {
@@ -85,4 +63,43 @@ module.exports = {
         $scope.resources = ResourcesService.getResources();
     },
 };
+},{}],4:[function(require,module,exports){
+module.exports = {
+    name: 'LemonadeService',
+    func: function () {
+        const log = [            
+            { label: 'DAY', value: 1},
+            { label: 'MONEY', value: '$' + 10},
+            { label: 'VISITORS', value: 100},
+            { label: 'CUSTOMERS', value: 0},
+        ];
+    
+        return {
+            getLog() {
+                return log;
+            },
+        };
+
+    },
+
+
+}
+},{}],5:[function(require,module,exports){
+module.exports = {
+    name: 'ResourcesService',
+    func: function () {
+        const resources = [
+            {name: 'lemons', stock: 10, price: 2},
+            {name: 'sugar', stock: 0, price: 1.25},
+            {name: 'ice', stock: 0, price: .50},
+            {name: 'cups', stock: 0, price: .10},
+        ];
+
+        return {
+            getResources() {
+                return resources;
+            },
+        }
+    }
+}
 },{}]},{},[1]);

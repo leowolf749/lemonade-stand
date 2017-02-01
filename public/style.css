@@ -1255,46 +1255,45 @@ button {
 
 body {
   background-color: white;
-  color: black; }
-
-section {
+  color: black;
   width: 80%;
   margin: 0 auto; }
-  section ul {
-    max-width: 75rem;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0px; }
-    section ul::before, section ul::after {
-      display: table;
-      content: ' '; }
-    section ul::after {
-      clear: both; }
-    section ul .daily {
-      width: 25%;
-      float: left;
-      padding-right: 0.625rem;
-      padding-left: 0.625rem;
-      list-style-type: none;
-      text-align: center; }
-      @media print, screen and (min-width: 40em) {
-        section ul .daily {
-          padding-right: 0.9375rem;
-          padding-left: 0.9375rem; } }
-      section ul .daily:last-child:not(:first-child) {
-        float: right; }
-    section ul .supply {
-      width: 50%;
-      float: left;
-      padding-right: 0.625rem;
-      padding-left: 0.625rem;
-      list-style-type: none; }
-      @media print, screen and (min-width: 40em) {
-        section ul .supply {
-          padding-right: 0.9375rem;
-          padding-left: 0.9375rem; } }
-      section ul .supply:last-child:not(:first-child) {
-        float: right; }
-      section ul .supply button {
-        border: 2px solid black;
-        padding: 5px; }
+
+section ul {
+  max-width: 75rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0px; }
+  section ul::before, section ul::after {
+    display: table;
+    content: ' '; }
+  section ul::after {
+    clear: both; }
+  section ul .daily {
+    width: 25%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    list-style-type: none;
+    text-align: center; }
+    @media print, screen and (min-width: 40em) {
+      section ul .daily {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    section ul .daily:last-child:not(:first-child) {
+      float: right; }
+  section ul .supply {
+    width: 50%;
+    float: left;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    list-style-type: none; }
+    @media print, screen and (min-width: 40em) {
+      section ul .supply {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem; } }
+    section ul .supply:last-child:not(:first-child) {
+      float: right; }
+    section ul .supply button {
+      border: 2px solid black;
+      padding: 5px; }
