@@ -10,11 +10,29 @@ body {
     color: black;
 }
 
-li {
-    list-style-type: none;
+section {
+    width: 80%;
+    margin: 0 auto;
 
-    button {
-        border: 2px solid black;
-        padding: 5px;
+    ul {
+        @include grid-row();
+        padding: 0px;    
+
+        .daily {
+            @include grid-column(3);
+            list-style-type: none;
+            text-align: center;
+
+        }
+
+        .supply {
+            @include grid-column(6);
+            list-style-type: none;
+
+            button {
+                border: 2px solid black;
+                padding: 5px;
+            }
+        }
     }
 }

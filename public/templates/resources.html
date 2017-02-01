@@ -1,6 +1,6 @@
 <section ng-controller="ResourcesController">
     <ul>
-        <li ng-repeat="resource in resources">
+        <li class="supply" ng-repeat="resource in resources">
             <h2>{{ resource.name }}</h2>
                 <p>In stock: {{ resource.stock }}</p>
                 <input type='number' placeholder='${{ resource.price }} each'>
